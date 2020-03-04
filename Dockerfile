@@ -2,9 +2,9 @@ ARG BUILD_FROM=hassioaddons/base:7.0.2
 
 FROM ${BUILD_FROM}
 
-COPY package.json /opt/
+COPY package.json /
 
-WORKDIR /opt
+WORKDIR /
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -59,6 +59,4 @@ LABEL \
     org.label-schema.name="otg2mqtt" \
     org.label-schema.schema-version="1.0"
 
-WORKDIR /
-
-CMD [ "run.sh" ]
+CMD [ "execute.sh" ]
