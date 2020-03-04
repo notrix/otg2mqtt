@@ -1,0 +1,11 @@
+device: '${device}'
+mqtt:
+    host: '${host}'
+    options:
+        username: '${username}'
+        password: '${password}'
+topics:
+    values: value/otg
+    control: control/otg
+    status: status/otg
+    logs: log/otg

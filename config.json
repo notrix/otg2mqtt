@@ -1,0 +1,11 @@
+{
+  "name": "otg2mqtt",
+  "version": "1",
+  "slug": "otg2mqtt",
+  "description": "Publish OpenThermGateway events to MQTT queues",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "before",
+  "boot": "auto",
+  "options": {},
+  "schema": {}
+}
