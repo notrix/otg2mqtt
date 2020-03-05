@@ -2,7 +2,9 @@ ARG BUILD_FROM=hassioaddons/base:7.0.2
 
 FROM ${BUILD_FROM}
 
-COPY package.json /
+ENV LANG C.UTF-8
+
+COPY rootfs /
 
 WORKDIR /
 
@@ -39,8 +41,6 @@ RUN apk del --no-cache --purge .build-dependencies
 
 RUN rm -fr /tmp/*
 
-COPY rootfs /
-
 ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
@@ -59,4 +59,6 @@ LABEL \
     org.label-schema.name="otg2mqtt" \
     org.label-schema.schema-version="1.0"
 
-CMD [ "execute.sh" ]
+RUN chmod a+x /execute.sh
+
+CMD [ "/execute.sh" ]
