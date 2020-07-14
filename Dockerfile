@@ -7,6 +7,14 @@ COPY rootfs /
 
 WORKDIR /
 
+RUN apk add --no-cache --virtual .build-dependencies \
+        g++ \
+        gcc \
+        libc-dev \
+        linux-headers \
+        make \
+        python2-dev
+
 RUN apk add nodejs npm
 
 RUN npm config set unsafe-perm true
