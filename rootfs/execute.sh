@@ -1,4 +1,4 @@
-#!/usr/bin/env bashio
+#!/usr/bin/with-contenv bashio
 
 DEVICE="/dev/ttyUSB0"
 HOST=$(bashio::services mqtt "host")

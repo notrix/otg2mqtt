@@ -3,8 +3,16 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-# Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
+COPY rootfs /
 
-CMD [ "/run.sh" ]
+WORKDIR /
+
+RUN apk add nodejs npm
+
+RUN npm config set unsafe-perm true
+
+RUN npm install --no-audit --no-optional --no-update-notifier --only=production --unsafe-perm
+
+RUN chmod a+x /execute.sh
+
+CMD [ "/execute.sh" ]
