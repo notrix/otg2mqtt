@@ -5,7 +5,7 @@
   "description": "Publish OpenThermGateway events to MQTT queues",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",
-  "services": {"mqtt": "need"},
+  "services": ["mqtt:need"],
   "boot": "auto",
   "stage": "experimental",
   "devices": ["/dev/ttyUSB0:/dev/ttyUSB0:rwm"],
