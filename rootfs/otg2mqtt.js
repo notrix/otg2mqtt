@@ -114,7 +114,7 @@ try {
         var type = data.slice(1, 2); // 1, 4, 5, 9, C
         var id = parseInt(data.slice(3, 5), 16);
         var payload = data.slice(-4); // last 4 chars
-console.log(target + ' | ' + type + ' | ' + id + ' | ' + payload);
+//console.log(target + ' | ' + type + ' | ' + id + ' | ' + payload);
         if (data.length === 9) {
             if (
                 opentherm.process.targets.indexOf(target) !== -1 &&
