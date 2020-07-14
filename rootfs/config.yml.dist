@@ -1,4 +1,4 @@
-device: '${device}'
+device: '/dev/ttyUSB0'
 mqtt:
     host: '${host}'
     options:

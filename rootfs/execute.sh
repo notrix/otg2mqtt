@@ -1,6 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-DEVICE="/dev/ttyUSB0"
 HOST=$(bashio::services mqtt "host")
 USERNAME=$(bashio::services mqtt "username")
 PASSWORD=$(bashio::services mqtt "password")
