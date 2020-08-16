@@ -165,7 +165,7 @@ try {
                             qos: 1
                         });
 
-//console.log(queue + ' = ' + topics[queue]);
+console.log(queue + ' = ' + topics[queue]);
 
                         previous[queue] = topics[queue];
                     }
